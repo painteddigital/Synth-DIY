@@ -1,4 +1,4 @@
-update=Wednesday, October 25, 2017 'PMt' 08:54:59 PM
+update=Tuesday, October 31, 2017 'PMt' 05:17:38 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -42,7 +42,7 @@ version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Yusynth ARP4072 VCF - 1.net
+LastNetListRead=Yusynth ARP4072 VCF.net
 PadDrill=0.762
 PadDrillOvalY=0.762
 PadSizeH=1.524
