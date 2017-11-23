@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:Yusynth ARP4072 VCF-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -877,28 +878,6 @@ F 2 "Resistors_SMD:R_0603" V 5630 800 50  0001 C CNN
 F 3 "" H 5700 800 50  0001 C CNN
 	1    5700 800 
 	0    1    1    0   
-$EndComp
-$Comp
-L POT_Dual RV6
-U 1 1 59C64A2C
-P 8100 800
-F 0 "RV6" H 8100 950 50  0000 C CNN
-F 1 "Resonance 100K" H 8100 600 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Alps_RK09L_Double_Horizontal" H 8350 725 50  0001 C CNN
-F 3 "" H 8350 725 50  0001 C CNN
-	1    8100 800 
-	1    0    0    1   
-$EndComp
-$Comp
-L Earth #PWR39
-U 1 1 59C659D1
-P 8300 1050
-F 0 "#PWR39" H 8300 800 50  0001 C CNN
-F 1 "Earth" H 8300 900 50  0001 C CNN
-F 2 "" H 8300 1050 50  0001 C CNN
-F 3 "" H 8300 1050 50  0001 C CNN
-	1    8300 1050
-	1    0    0    -1  
 $EndComp
 $Comp
 L R R33
@@ -1966,35 +1945,9 @@ Wire Wire Line
 Wire Wire Line
 	3750 800  5550 800 
 Wire Wire Line
-	5850 800  7550 800 
+	5850 800  7650 800 
 Wire Wire Line
-	7550 800  7550 900 
-Wire Wire Line
-	7550 900  7850 900 
-Wire Wire Line
-	8000 700  8000 950 
-Wire Wire Line
-	8000 950  8300 950 
-Wire Wire Line
-	8300 950  8600 950 
-Wire Wire Line
-	8600 950  8600 700 
-Wire Wire Line
-	8600 700  8500 700 
-Connection ~ 8300 950 
-Wire Wire Line
-	8300 950  8300 1050
-Wire Wire Line
-	7800 1150 7800 1050
-Wire Wire Line
-	7700 1050 7800 1050
-Wire Wire Line
-	7800 1050 8200 1050
-Wire Wire Line
-	7700 1050 7700 700 
-Connection ~ 7800 1050
-Wire Wire Line
-	8200 1050 8200 700 
+	7800 950  7800 1150
 Wire Wire Line
 	8350 1700 8250 1700
 Wire Wire Line
@@ -2005,16 +1958,14 @@ Wire Wire Line
 	8800 1300 8800 1500
 Connection ~ 8700 1700
 Wire Wire Line
-	8700 1700 8700 1050
+	8700 1700 8700 950 
 Wire Wire Line
-	8700 1050 8900 950 
+	8700 950  8900 950 
 Wire Wire Line
 	9200 950  9400 950 
 Wire Wire Line
 	9400 950  9400 1600
-Connection ~ 8700 1050
-Wire Wire Line
-	8350 1050 8350 900 
+Connection ~ 8700 950 
 Wire Wire Line
 	9400 1600 9600 1600
 Wire Wire Line
@@ -2216,16 +2167,16 @@ Wire Wire Line
 $Comp
 L R R44
 U 1 1 59F94363
-P 8500 1050
-F 0 "R44" V 8580 1050 50  0000 C CNN
-F 1 "22K" V 8500 1050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 8430 1050 50  0001 C CNN
-F 3 "" H 8500 1050 50  0001 C CNN
-	1    8500 1050
+P 8500 950
+F 0 "R44" V 8580 950 50  0000 C CNN
+F 1 "22K" V 8500 950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 8430 950 50  0001 C CNN
+F 3 "" H 8500 950 50  0001 C CNN
+	1    8500 950 
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8700 1050 8650 1050
+	8700 950  8650 950 
 Text Notes 3400 7700 0    60   ~ 0
 V/Oct Trimmer\n
 Text Notes 4100 5650 0    60   ~ 0
@@ -2317,5 +2268,28 @@ F 2 "" H 3550 4250 50  0001 C CNN
 F 3 "" H 3550 4250 50  0001 C CNN
 	1    3550 4250
 	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV?
+U 1 1 5A16FF74
+P 7800 800
+F 0 "RV?" V 7625 800 50  0000 C CNN
+F 1 "47Ka" V 7700 800 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Alps_RK09L_Sleve_Single_Horizontal" H 7800 800 50  0001 C CNN
+F 3 "" H 7800 800 50  0001 C CNN
+	1    7800 800 
+	-1   0    0    1   
+$EndComp
+NoConn ~ 8350 950 
+$Comp
+L Earth #PWR?
+U 1 1 5A171611
+P 7800 650
+F 0 "#PWR?" H 7800 400 50  0001 C CNN
+F 1 "Earth" H 7800 500 50  0001 C CNN
+F 2 "" H 7800 650 50  0001 C CNN
+F 3 "" H 7800 650 50  0001 C CNN
+	1    7800 650 
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
