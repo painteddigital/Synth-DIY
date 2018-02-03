@@ -1,0 +1,1 @@
+This repo isn't quite production ready. So don't send these boards off to get made unless you know what you're doing. The jacks are not currently routed properly but I hope to fix them. If you know how to use KiCad and can fix them up, by all means submit a PR.
